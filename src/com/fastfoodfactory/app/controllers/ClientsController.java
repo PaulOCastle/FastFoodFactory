@@ -26,4 +26,9 @@ public class ClientsController extends Controller implements ControllerResources
     public void edit(int id) {
 
     }
+
+    @Override
+    public void search() {
+
+    }
 }

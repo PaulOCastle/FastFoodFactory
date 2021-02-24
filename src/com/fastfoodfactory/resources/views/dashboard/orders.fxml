@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.Cursor?>
 <GridPane alignment="CENTER" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fastfoodfactory.app.controllers.OrdersController">
 
     <!-- Properties -->
@@ -24,6 +28,7 @@
         <RowConstraints vgrow="SOMETIMES" />
         <RowConstraints vgrow="SOMETIMES" />
         <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
     </rowConstraints>
 
     <padding>
@@ -33,9 +38,9 @@
     <!-- Content -->
 
     <!-- Breadcrumbs section -->
-    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="3">
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0">
         <GridPane.margin>
-            <Insets top="5.0" bottom="20.0" left="20.0" right="20.0" />
+            <Insets bottom="20.0" left="20.0" right="20.0" top="5.0" />
         </GridPane.margin>
         <Label text="Orders">
             <font>
@@ -45,13 +50,49 @@
     </HBox>
 
     <!-- Search function -->
+    <TextField styleClass="input-field" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets topRightBottomLeft="20.0" />
+        </GridPane.margin>
+        <font>
+            <Font name="Arial" size="18.0" />
+        </font>
+    </TextField>
+    <Button onMouseClicked="#search" styleClass="btn" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets bottom="20.0" top="20.00" />
+        </GridPane.margin>
+        <font>
+            <Font name="Arial" size="18.0" />
+        </font>
+    </Button>
 
     <!-- New Order Button -->
-    <Button contentDisplay="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1" onMouseClicked="#create" styleClass="btn-add" text="New Order">
-        <cursor>
-            <Cursor fx:constant="HAND" />
-        </cursor>
-
+    <Button onMouseClicked="#create" styleClass="btn" text="New Order" GridPane.halignment="RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <GridPane.margin>
+            <Insets bottom="20.0" top="20.00" right="20.0" />
+        </GridPane.margin>
+        <font>
+            <Font name="Arial" size="18.0" />
+        </font>
     </Button>
+
+    <!-- Orders table -->
+    <TableView GridPane.columnSpan="3" GridPane.rowIndex="2">
+        <columns>
+            <TableColumn text="Id" />
+            <TableColumn text="Date" />
+            <TableColumn text="Client" />
+            <TableColumn text="Created by..." />
+            <TableColumn text="Gross" />
+            <TableColumn text="VAT" />
+            <TableColumn text="Total" />
+            <TableColumn text="Status" />
+            <TableColumn text="Actions" />
+        </columns>
+    </TableView>
+
+    <!-- Pagination -->
+    <Pagination GridPane.columnSpan="3" GridPane.rowIndex="3" />
 
 </GridPane>

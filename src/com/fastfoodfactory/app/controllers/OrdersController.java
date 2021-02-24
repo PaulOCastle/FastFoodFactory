@@ -14,16 +14,21 @@ public class OrdersController extends Controller implements ControllerResources 
 
     @Override
     public void create() {
-
+        this.renderModal("orders/create", "Create new order");
     }
 
     @Override
     public void show(int id) {
-
+        this.renderModal("orders/show", "Show order");
     }
 
     @Override
     public void edit(int id) {
+        this.renderModal("orders/edit", "Edit order");
+    }
+
+    @Override
+    public void search() {
 
     }
 }

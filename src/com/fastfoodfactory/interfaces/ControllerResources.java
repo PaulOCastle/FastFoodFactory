@@ -12,4 +12,5 @@ public interface ControllerResources {
     void create();
     void show(int id);
     void edit(int id);
+    void search();
 }

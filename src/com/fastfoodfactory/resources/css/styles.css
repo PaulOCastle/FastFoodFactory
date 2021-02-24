@@ -1,5 +1,29 @@
 // ===== General styles
 
+.btn {
+    -fx-background-color: #2276FF;
+    -fx-background-radius: 50;
+    -fx-padding: 5px 20px;
+    -fx-content-display: center;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.btn:hover {
+    -fx-background-color: #22AFFF;
+    -fx-text-fill: #333333;
+}
+
+.input-field {
+    -fx-background-color: #FFF;
+    -fx-background-radius: 50;
+    -fx-border-color: #333333;
+    -fx-border-radius: 50;
+    -fx-padding: 5px 20px;
+}
+
+// ===== Dashboard menu styles
+
 #mainBody {
     -fx-background-color: #FFF;
 }
@@ -32,7 +56,7 @@
     -fx-background-color: #666666;
 }
 
-// ===== Home styles
+// ===== Dashboard view styles
 
 .counter-clients {
     -fx-background-color: #99cc66;

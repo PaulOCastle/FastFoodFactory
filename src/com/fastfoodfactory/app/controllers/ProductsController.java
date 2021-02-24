@@ -26,4 +26,8 @@ public class ProductsController extends Controller implements ControllerResource
     public void edit(int id) {
 
     }
+    @Override
+    public void search() {
+
+    }
 }
