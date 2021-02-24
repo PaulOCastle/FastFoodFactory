@@ -1,0 +1,50 @@
+// ===== General styles
+
+#mainBody {
+    -fx-background-color: #FFF;
+}
+
+.brand {
+    -fx-background-color: #ff9900;
+}
+
+.top-menu {
+    -fx-background-color: #fff;
+}
+
+.topmenu-btn {
+    -fx-background-color: transparent;
+}
+
+.topmenu-btn:hover {
+    -fx-background-color: #f1f1f1;
+}
+
+.sidebar {
+    -fx-background-color: #333333;
+}
+
+.sidebar-btn {
+    -fx-background-color: transparent;
+}
+
+.sidebar-btn:hover {
+    -fx-background-color: #666666;
+}
+
+// ===== Home styles
+
+.counter-clients {
+    -fx-background-color: #99cc66;
+    -fx-background-radius: 10;
+}
+
+.counter-orders {
+    -fx-background-color: #ffcc00;
+    -fx-background-radius: 10;
+}
+
+.counter-income {
+    -fx-background-color: #ff3333;
+    -fx-background-radius: 10;
+}

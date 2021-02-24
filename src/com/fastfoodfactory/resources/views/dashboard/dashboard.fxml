@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fastfoodfactory.app.controllers.DashboardController">
+
+    <!-- Properties -->
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="SOMETIMES" />
+    </rowConstraints>
+
+    <padding>
+        <Insets topRightBottomLeft="10.0" />
+    </padding>
+
+    <!-- Content -->
+
+    <!-- Breadcrumbs section -->
+    <HBox alignment="CENTER_LEFT" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="3">
+        <GridPane.margin>
+            <Insets top="5.0" bottom="20.0" left="20.0" right="20.0" />
+        </GridPane.margin>
+        <Label text="Dashboard">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Label>
+    </HBox>
+
+    <!-- Counters section -->
+
+    <HBox alignment="CENTER" styleClass="counter-clients" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <!-- Properties -->
+        <GridPane.margin>
+            <Insets top="5" bottom="5" left="50" right="50" />
+        </GridPane.margin>
+
+        <!-- Content -->
+        <Label alignment="CENTER">
+            <padding>
+                <Insets right="10.0" />
+            </padding>
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../img/icons/clients.png" />
+                </ImageView>
+            </graphic>
+        </Label>
+        <Label text="200" textFill="WHITE">
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+            <font>
+                <Font name="Arial" size="50.0" />
+            </font>
+        </Label>
+    </HBox>
+
+    <HBox alignment="CENTER" styleClass="counter-orders" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <!-- Properties -->
+        <GridPane.margin>
+            <Insets top="5" bottom="5" left="50" right="50" />
+        </GridPane.margin>
+
+        <!-- Content -->
+        <Label alignment="CENTER">
+            <padding>
+                <Insets right="10.0" />
+            </padding>
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../img/icons/orders.png" />
+                </ImageView>
+            </graphic>
+        </Label>
+        <Label text="200" textFill="WHITE">
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+            <font>
+                <Font name="Arial" size="50.0" />
+            </font>
+        </Label>
+    </HBox>
+
+    <HBox alignment="CENTER" styleClass="counter-income" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <!-- Properties -->
+        <GridPane.margin>
+            <Insets top="5" bottom="5" left="50" right="50" />
+        </GridPane.margin>
+
+        <!-- Content -->
+        <Label alignment="CENTER">
+            <padding>
+                <Insets right="10.0" />
+            </padding>
+            <graphic>
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../../img/icons/products.png" />
+                </ImageView>
+            </graphic>
+        </Label>
+        <Label text="200" textFill="WHITE">
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+            <font>
+                <Font name="Arial" size="50.0" />
+            </font>
+        </Label>
+    </HBox>
+
+    <!-- Graph section -->
+    <!-- Title -->
+    <Label text="Sales per Day" GridPane.rowIndex="2" GridPane.columnSpan="3">
+        <padding>
+            <Insets top="30.0" left="20.0" />
+        </padding>
+        <font>
+            <Font name="Arial" size="20.0" />
+        </font>
+    </Label>
+    <!-- Graph -->
+    <BarChart prefHeight="200.0" prefWidth="500.0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+
+        <!-- Properties -->
+        <padding>
+            <Insets topRightBottomLeft="20.0" />
+        </padding>
+
+        <!-- Content -->
+        <xAxis>
+            <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis side="LEFT" />
+        </yAxis>
+    </BarChart>
+</GridPane>

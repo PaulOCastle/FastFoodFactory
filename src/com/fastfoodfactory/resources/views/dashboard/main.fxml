@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.fastfoodfactory.core.gnavatar.GNAvatarView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBody" prefHeight="600.0" prefWidth="1024.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fastfoodfactory.app.controllers.DashboardController">
+
+    <!-- top-menu -->
+    <top>
+        <HBox prefHeight="50.0" prefWidth="1024.0" styleClass="top-menu">
+
+            <!-- Properties -->
+            <effect>
+                <DropShadow color="#CCC" offsetX="1" offsetY="1" />
+            </effect>
+
+            <!-- Content -->
+
+            <!-- Logo -->
+            <Label alignment="CENTER" minWidth="75.0" prefHeight="50.0" prefWidth="75.0" styleClass="brand">
+                <graphic>
+                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../img/logo.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+
+            <GridPane HBox.hgrow="ALWAYS">
+
+                <!-- Properties -->
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="SOMETIMES" />
+                </rowConstraints>
+
+                <!-- Content -->
+
+                <!-- Company name -->
+                <Label alignment="CENTER" prefHeight="50.0" text="The Fast Food Factory - CRM">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <Label alignment="CENTER" prefHeight="50.0" text="18/02/2021 @ 10:54" GridPane.columnIndex="1">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="50.0" text="Welcome" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <Label alignment="CENTER" prefHeight="50.0" text="Pau Ferrer" GridPane.columnIndex="3">
+                    <padding>
+                        <Insets left="15.0" right="15.0" />
+                    </padding>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <GNAvatarView prefHeight="40.0" prefWidth="40.0" type="CIRCLE" GridPane.columnIndex="4">
+                    <Image url="@../../img/avatars/avarat_1.jpg"/>
+                </GNAvatarView>
+
+                <Button prefHeight="50.0" prefWidth="75.0" styleClass="topmenu-btn" GridPane.columnIndex="5">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../../img/icons/exit.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+            </GridPane>
+        </HBox>
+    </top>
+
+    <!-- sidebar -->
+    <left>
+        <VBox maxWidth="1.7976931348623157E308" prefWidth="75.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+
+            <!-- Properties -->
+            <padding>
+                <Insets bottom="20.0" top="20.0" />
+            </padding>
+
+            <!-- Content -->
+
+            <!-- navigation buttons -->
+            <Button contentDisplay="CENTER" maxWidth="75.0" onMouseClicked="#showDashboard" prefHeight="50.0" styleClass="sidebar-btn">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <graphic>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../img/icons/home.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button contentDisplay="CENTER" maxWidth="75.0" onMouseClicked="#showOrders" prefHeight="50.0" styleClass="sidebar-btn">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <graphic>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../img/icons/orders.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button contentDisplay="CENTER" maxWidth="75.0" onMouseClicked="#showClients" prefHeight="50.0" styleClass="sidebar-btn">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <graphic>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../img/icons/clients.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button contentDisplay="CENTER" maxWidth="75.0" onMouseClicked="#showProducts" prefHeight="50.0" styleClass="sidebar-btn">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <graphic>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../img/icons/products.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button contentDisplay="CENTER" maxWidth="75.0" onMouseClicked="#showUsers" prefHeight="50.0" styleClass="sidebar-btn">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <graphic>
+                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../img/icons/users.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </VBox>
+    </left>
+
+    <!-- Main content -->
+    <center>
+        <fx:include source="dashboard.fxml" />
+    </center>
+</BorderPane>
